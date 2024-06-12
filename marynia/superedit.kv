@@ -1,0 +1,33 @@
+BoxLayout:
+    orientation: "vertical"
+    Label:
+        id: nazwa
+        text: "Our Super Editor"
+        size_hint_y: 0.05
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_y: 0.08
+        Label:
+            text: "Filename: "
+            size_hint_x: 0.2
+        TextInput:
+            id: tiFName
+            multiline: False
+            text: "plik.txt"
+    TextInput:
+        id: tiMain
+        multiline: True
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_y: 0.2
+        Button:
+            text: "Load"
+            on_press: app.load()
+        Button:
+            text: "Save"
+            on_press: app.save()
+        Button:
+            text: "Save to"
+            on_press: app.save_to()
+    # FileChooserListView:
+    #     id: fcName
